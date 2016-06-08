@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53D999111D0765F3009ABC4F /* DogPen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53D999101D0765F3009ABC4F /* DogPen.plist */; };
+		53D999151D0767A4009ABC4F /* DogPenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D999141D0767A4009ABC4F /* DogPenModel.swift */; };
+		53D999191D07908B009ABC4F /* DogPenOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D999171D07908B009ABC4F /* DogPenOverlayView.swift */; };
+		53D9991A1D07908B009ABC4F /* DogPenOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D999181D07908B009ABC4F /* DogPenOverlay.swift */; };
 		53FF6EE71D0759EB009FA550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FF6EE61D0759EB009FA550 /* AppDelegate.swift */; };
 		53FF6EE91D0759EB009FA550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FF6EE81D0759EB009FA550 /* ViewController.swift */; };
 		53FF6EEC1D0759EB009FA550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FF6EEA1D0759EB009FA550 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53D999101D0765F3009ABC4F /* DogPen.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DogPen.plist; sourceTree = "<group>"; };
+		53D999141D0767A4009ABC4F /* DogPenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPenModel.swift; sourceTree = "<group>"; };
+		53D999171D07908B009ABC4F /* DogPenOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPenOverlayView.swift; sourceTree = "<group>"; };
+		53D999181D07908B009ABC4F /* DogPenOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPenOverlay.swift; sourceTree = "<group>"; };
 		53FF6EE31D0759EA009FA550 /* DogPen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogPen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FF6EE61D0759EB009FA550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53FF6EE81D0759EB009FA550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53D999161D079075009ABC4F /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				53D999171D07908B009ABC4F /* DogPenOverlayView.swift */,
+				53D999181D07908B009ABC4F /* DogPenOverlay.swift */,
+			);
+			name = Overlays;
+			sourceTree = "<group>";
+		};
 		53FF6EDA1D0759EA009FA550 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +71,49 @@
 		53FF6EE51D0759EB009FA550 /* DogPen */ = {
 			isa = PBXGroup;
 			children = (
-				53FF6EE61D0759EB009FA550 /* AppDelegate.swift */,
-				53FF6EE81D0759EB009FA550 /* ViewController.swift */,
-				53FF6EEA1D0759EB009FA550 /* Main.storyboard */,
+				53D999161D079075009ABC4F /* Overlays */,
+				53FF6EFA1D0764EB009FA550 /* Model */,
+				53FF6EF91D0764D5009FA550 /* View */,
+				53FF6EF81D0764C9009FA550 /* Controller */,
 				53FF6EED1D0759EB009FA550 /* Assets.xcassets */,
-				53FF6EEF1D0759EB009FA550 /* LaunchScreen.storyboard */,
-				53FF6EF21D0759EB009FA550 /* Info.plist */,
+				53FF6EFB1D076514009FA550 /* SupportingFiles */,
 			);
 			path = DogPen;
+			sourceTree = "<group>";
+		};
+		53FF6EF81D0764C9009FA550 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53FF6EE81D0759EB009FA550 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		53FF6EF91D0764D5009FA550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53FF6EEF1D0759EB009FA550 /* LaunchScreen.storyboard */,
+				53FF6EEA1D0759EB009FA550 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53FF6EFA1D0764EB009FA550 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53D999141D0767A4009ABC4F /* DogPenModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53FF6EFB1D076514009FA550 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				53FF6EE61D0759EB009FA550 /* AppDelegate.swift */,
+				53FF6EF21D0759EB009FA550 /* Info.plist */,
+				53D999101D0765F3009ABC4F /* DogPen.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53FF6EF11D0759EB009FA550 /* LaunchScreen.storyboard in Resources */,
+				53D999111D0765F3009ABC4F /* DogPen.plist in Resources */,
 				53FF6EEE1D0759EB009FA550 /* Assets.xcassets in Resources */,
 				53FF6EEC1D0759EB009FA550 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D999191D07908B009ABC4F /* DogPenOverlayView.swift in Sources */,
 				53FF6EE91D0759EB009FA550 /* ViewController.swift in Sources */,
 				53FF6EE71D0759EB009FA550 /* AppDelegate.swift in Sources */,
+				53D9991A1D07908B009ABC4F /* DogPenOverlay.swift in Sources */,
+				53D999151D0767A4009ABC4F /* DogPenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +342,7 @@
 				53FF6EF71D0759EB009FA550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

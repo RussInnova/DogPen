@@ -15,6 +15,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
+    var dogPen = DogPenModel(filename: "DogPen")
     
     
     override func viewDidLoad() {
@@ -27,20 +28,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.requestLocation()
         locationManager.startUpdatingLocation()
         
+        self.loadSelectedOptions()
         mapView.showsUserLocation = true
+        mapView.delegate = self
+        
+        
         
         }
+    override func viewDidAppear(animated: Bool) {
+        let latDelta = dogPen.overlayTopLeftCoordinate.latitude - dogPen.overlayBottomRightCoordinate.latitude
+        let span = MKCoordinateSpanMake(fabs(latDelta), 0.0)
+        let region = MKCoordinateRegionMake(dogPen.midCoordinate, span)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    func loadSelectedOptions() {
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.removeOverlays(mapView.overlays)
+        mapView.mapType = MKMapType.Hybrid
+        addBoundary()
+    }
+    
 //MARK: Location Delegate Methods
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations.last
-        
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        
-        let region = MKCoordinateRegion (center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
-        
-        self.mapView.setRegion(region, animated: true)
         
         self.locationManager.stopUpdatingLocation()
         
@@ -50,6 +61,25 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         print("Error: /(error.localizedDescription)")
     }
 
+    func addBoundary() {
+        let polygon = MKPolygon(coordinates: &dogPen.boundary, count: dogPen.boundaryPointsCount)
+        print (dogPen.boundary)
+        mapView.addOverlay(polygon)
+        
+    }
 
+    func addOverlay() {
+    
+    let overlay = DogPenOverlay(dogPen: dogPen)
+    mapView.addOverlay(overlay)
+    }
+
+    func mapView (mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer
+    {
+       
+            let polygonView = MKPolygonRenderer(overlay: overlay)
+            polygonView.strokeColor = UIColor.magentaColor()
+            polygonView.lineWidth = 2.0
+            return polygonView
+    }
 }
-
