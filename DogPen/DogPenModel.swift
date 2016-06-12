@@ -71,6 +71,5 @@ class DogPenModel {
             let p = CGPointFromString(boundaryPoints[i] as! String)
             boundary += [CLLocationCoordinate2DMake(CLLocationDegrees(p.x), CLLocationDegrees(p.y))]
         }
-        print(boundaryPoints)
     }
 }
