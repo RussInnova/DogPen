@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--DogPen-->
@@ -20,6 +21,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xjb-Iv-It6">
                                 <rect key="frame" x="0.0" y="64" width="600" height="466"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dKC-rh-N9H" appends="YES" id="GBr-V3-ont"/>
+                                </connections>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bW-MM-1rK">
                                 <rect key="frame" x="0.0" y="530" width="600" height="70"/>
@@ -35,6 +39,11 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="5w5-7k-lcu"/>
+                                                    </mask>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confidence Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejs-N8-mjc">
                                                 <rect key="frame" x="163" y="0.0" width="137" height="20"/>
@@ -44,6 +53,11 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="plg-Ps-HBG"/>
+                                                    </mask>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <constraints>
@@ -58,35 +72,30 @@
                                     <constraint firstItem="afH-h0-8fV" firstAttribute="centerY" secondItem="7bW-MM-1rK" secondAttribute="centerY" id="vWQ-PO-bGh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjn-lG-iqa">
+                                <rect key="frame" x="524" y="74" width="36" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.29411764709999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bO-pK-WGS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7bW-MM-1rK" firstAttribute="leading" secondItem="Xjb-Iv-It6" secondAttribute="leading" id="4Ym-fk-1Ax"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fjn-lG-iqa" secondAttribute="trailing" constant="20" id="34U-qw-ZPx"/>
                             <constraint firstItem="Xjb-Iv-It6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7zM-BO-BAO"/>
-                            <constraint firstItem="7bW-MM-1rK" firstAttribute="trailing" secondItem="Xjb-Iv-It6" secondAttribute="trailing" id="FF0-vd-EhY"/>
                             <constraint firstItem="7bW-MM-1rK" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="HBd-vD-awF"/>
                             <constraint firstItem="7bW-MM-1rK" firstAttribute="top" secondItem="Xjb-Iv-It6" secondAttribute="bottom" id="XeJ-YS-Srq"/>
-                            <constraint firstItem="7bW-MM-1rK" firstAttribute="top" secondItem="Xjb-Iv-It6" secondAttribute="bottom" constant="8" symbolic="YES" id="bK9-4j-hO9"/>
-                            <constraint firstItem="7bW-MM-1rK" firstAttribute="trailing" secondItem="Xjb-Iv-It6" secondAttribute="trailing" id="bLC-Sj-Cdq"/>
-                            <constraint firstItem="7bW-MM-1rK" firstAttribute="leading" secondItem="Xjb-Iv-It6" secondAttribute="leading" id="bOy-RS-eAP"/>
+                            <constraint firstItem="fjn-lG-iqa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="b8h-0h-eXm"/>
                             <constraint firstAttribute="trailing" secondItem="7bW-MM-1rK" secondAttribute="trailing" id="bW6-az-kMi"/>
-                            <constraint firstItem="7bW-MM-1rK" firstAttribute="top" secondItem="Xjb-Iv-It6" secondAttribute="bottom" constant="8" symbolic="YES" id="dY0-tv-PB4"/>
                             <constraint firstItem="Xjb-Iv-It6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gKE-mK-h0O"/>
                             <constraint firstAttribute="trailing" secondItem="Xjb-Iv-It6" secondAttribute="trailing" id="ho7-ui-NYB"/>
                             <constraint firstItem="7bW-MM-1rK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pae-lD-hPI"/>
-                            <constraint firstItem="Xjb-Iv-It6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="yeh-tl-TUN"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="yeh-tl-TUN"/>
-                                <exclude reference="4Ym-fk-1Ax"/>
-                                <exclude reference="FF0-vd-EhY"/>
-                                <exclude reference="bK9-4j-hO9"/>
-                                <exclude reference="bLC-Sj-Cdq"/>
-                                <exclude reference="bOy-RS-eAP"/>
-                                <exclude reference="dY0-tv-PB4"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="DogPen" id="rVX-ax-ig6"/>
                     <connections>
@@ -94,6 +103,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="2" id="dKC-rh-N9H">
+                    <connections>
+                        <action selector="addPin:" destination="BYZ-38-t0r" id="vbA-hA-Q9H"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1117" y="352"/>
         </scene>

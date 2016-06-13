@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5339743B1D0B55F700BAA488 /* DogPenAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339743A1D0B55F700BAA488 /* DogPenAnnotations.swift */; };
-		5339743D1D0B56E900BAA488 /* DogPennAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339743C1D0B56E900BAA488 /* DogPennAnnotationView.swift */; };
-		53D999111D0765F3009ABC4F /* DogPen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53D999101D0765F3009ABC4F /* DogPen.plist */; };
-		53D999151D0767A4009ABC4F /* DogPenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D999141D0767A4009ABC4F /* DogPenModel.swift */; };
-		53D999191D07908B009ABC4F /* DogPenOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D999171D07908B009ABC4F /* DogPenOverlayView.swift */; };
-		53D9991A1D07908B009ABC4F /* DogPenOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D999181D07908B009ABC4F /* DogPenOverlay.swift */; };
 		53FF6EE71D0759EB009FA550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FF6EE61D0759EB009FA550 /* AppDelegate.swift */; };
 		53FF6EE91D0759EB009FA550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FF6EE81D0759EB009FA550 /* ViewController.swift */; };
 		53FF6EEC1D0759EB009FA550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FF6EEA1D0759EB009FA550 /* Main.storyboard */; };
@@ -21,12 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5339743A1D0B55F700BAA488 /* DogPenAnnotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPenAnnotations.swift; sourceTree = "<group>"; };
-		5339743C1D0B56E900BAA488 /* DogPennAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPennAnnotationView.swift; sourceTree = "<group>"; };
-		53D999101D0765F3009ABC4F /* DogPen.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DogPen.plist; sourceTree = "<group>"; };
-		53D999141D0767A4009ABC4F /* DogPenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPenModel.swift; sourceTree = "<group>"; };
-		53D999171D07908B009ABC4F /* DogPenOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPenOverlayView.swift; sourceTree = "<group>"; };
-		53D999181D07908B009ABC4F /* DogPenOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPenOverlay.swift; sourceTree = "<group>"; };
 		53FF6EE31D0759EA009FA550 /* DogPen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogPen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FF6EE61D0759EB009FA550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53FF6EE81D0759EB009FA550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,8 +38,6 @@
 		53D999161D079075009ABC4F /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
-				53D999171D07908B009ABC4F /* DogPenOverlayView.swift */,
-				53D999181D07908B009ABC4F /* DogPenOverlay.swift */,
 			);
 			name = Overlays;
 			sourceTree = "<group>";
@@ -98,7 +84,6 @@
 			children = (
 				53FF6EEF1D0759EB009FA550 /* LaunchScreen.storyboard */,
 				53FF6EEA1D0759EB009FA550 /* Main.storyboard */,
-				5339743C1D0B56E900BAA488 /* DogPennAnnotationView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -106,8 +91,6 @@
 		53FF6EFA1D0764EB009FA550 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				53D999141D0767A4009ABC4F /* DogPenModel.swift */,
-				5339743A1D0B55F700BAA488 /* DogPenAnnotations.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,7 +100,6 @@
 			children = (
 				53FF6EE61D0759EB009FA550 /* AppDelegate.swift */,
 				53FF6EF21D0759EB009FA550 /* Info.plist */,
-				53D999101D0765F3009ABC4F /* DogPen.plist */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -181,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				53FF6EF11D0759EB009FA550 /* LaunchScreen.storyboard in Resources */,
-				53D999111D0765F3009ABC4F /* DogPen.plist in Resources */,
 				53FF6EEE1D0759EB009FA550 /* Assets.xcassets in Resources */,
 				53FF6EEC1D0759EB009FA550 /* Main.storyboard in Resources */,
 			);
@@ -194,13 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53D999191D07908B009ABC4F /* DogPenOverlayView.swift in Sources */,
-				5339743D1D0B56E900BAA488 /* DogPennAnnotationView.swift in Sources */,
 				53FF6EE91D0759EB009FA550 /* ViewController.swift in Sources */,
 				53FF6EE71D0759EB009FA550 /* AppDelegate.swift in Sources */,
-				53D9991A1D07908B009ABC4F /* DogPenOverlay.swift in Sources */,
-				53D999151D0767A4009ABC4F /* DogPenModel.swift in Sources */,
-				5339743B1D0B55F700BAA488 /* DogPenAnnotations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
