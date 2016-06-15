@@ -19,7 +19,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var boundary: [CLLocationCoordinate2D] = []
     var isWarning: Bool = false
     var accuracyLevel: Double!
-    var count: Int = 0
     var polygon: [CLLocationCoordinate2D]?
     var latestLocation: CLLocation!
     
@@ -49,7 +48,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.mapType = MKMapType.Hybrid
     }
     
-//INSIDE OR OUTSIDE OF BOUNDARY
+//CONTROL VIEW WARNING LIGHT STATUS - MOVE TO VIEW SUBCLASSES?
 
     func updateWarningStatus ()
     {
@@ -140,7 +139,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return polygonView
     }
     
-//ADD PIN USING LONG TOUCH GESTURE RECOGNISER
+//BUILD PEN BY ADDING PINS USING LONG TOUCH GESTURE RECOGNISER - Move to MODEL LAYER?
     
     var pinNum = 0
     
@@ -183,7 +182,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         boundary = []
     }
     
-//SWIFT RENDITION OF PNPOLY ALGORITHM TO FIND OUT IF POINT IS INSIDE A POLYGON
+//SWIFT RENDITION OF PNPOLY ALGORITHM TO FIND OUT IF POINT IS INSIDE A POLYGON - MOVE TO MODEL?
     
     func isPointInsidePolygon(polygon: [CLLocationCoordinate2D], test:CLLocationCoordinate2D) -> Bool
     {
